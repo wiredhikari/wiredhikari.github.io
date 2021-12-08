@@ -54,7 +54,7 @@ menu_items = [
     {name = "about me", url = "$BASE_URL/about"},
 
     # set newtab to true to make the link open in new tab
-    {name = "github", url = "https://github.com/pawroman/zola-theme-terminimal", newtab = true},
+    {name = "github", url = "https://github.com/atharvaamritkar/", newtab = true},
 ]
 
 # Whether to show links to earlier and later posts
