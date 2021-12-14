@@ -4,7 +4,7 @@ title = "Zola Terminimal theme"
 
 # Sass compilation is required
 compile_sass = true
-theme = "themes/terminimal"
+theme = "terminimal"
 # Optional: enable tags
 taxonomies = [
     {name = "tags"}
