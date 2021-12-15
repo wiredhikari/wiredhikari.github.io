@@ -24,10 +24,10 @@ accent_color = "blue"
 # Enabling dark background will also modify primary font color
 # to be darker.
 # Defaults to accent color (or, if not accent color specified, to blue).
-background_color = "blue"
+background_color = "dark"
 
 # The logo text - defaults to "Terminimal theme"
-logo_text = "Terminimal theme"
+logo_text = "Hikari's Hideout"
 
 # The logo link - defaults to base_url.
 #logo_home_link = "/take/me/away!"
@@ -75,5 +75,5 @@ use_full_hack_font = true
 #           Mimetype defaults to "image/x-icon".
 #           The URL should point at a file located
 #           in your site's "static" directory.
-# favicon = "/favicon.png"
+ favicon = "/favicon.png"
 # favicon_mimetype = "image/png"

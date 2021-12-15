@@ -20,13 +20,13 @@ repo = "https://github.com/panr/hugo-theme-terminal"
 [extra]
 
 # One of: blue, green, orange, pink, red.
-accent_color = "blue"
+accent_color = "red"
 
 # One of: blue, dark, green, orange, pink, red.
 # Enabling dark background will also modify primary font color
 # to be darker.
 # Defaults to accent color (or, if not accent color specified, to blue).
-background_color = "blue"
+background_color = "dark"
 
 # The logo text - defaults to 2 non-breaking spaces.
 logo_text = "Terminimal theme"
