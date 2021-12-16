@@ -1,6 +1,6 @@
 # Be sure to change these!
 base_url = "https://atharva.io"
-title = "Zola Terminimal theme"
+title = "Hikari's Hideout"
 
 # Sass compilation is required
 compile_sass = true
