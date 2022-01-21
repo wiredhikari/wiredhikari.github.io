@@ -1,6 +1,6 @@
 +++
 title = "Umm first blog it seems"
-date = 2020-08-02
+date = 2021-08-02
 
 [taxonomies]
 tags = ["shitposting"]
