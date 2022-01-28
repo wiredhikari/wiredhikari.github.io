@@ -1,12 +1,12 @@
 +++
 title = "A Holochain Perspective"
-date = 2021-08-02
+date = 2022-01-25
 
 [taxonomies]
-tags = ["Web3.0 , Crypto"]
+tags = ["Web3.0" , "Crypto"]
 +++
 
-Soo... .
+Holochain - An Ideal framework .
 
 
 
