@@ -1,6 +1,6 @@
 
 +++
-title = "Bootstrapping Prefix on NixOS [WiP]"
+title = "Bootstrapping Prefix on NixOS"
 date = 2022-03-25
 
 [taxonomies]
