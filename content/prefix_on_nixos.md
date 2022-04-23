@@ -19,5 +19,5 @@ Bootstrapping Prefix to work on NixOS [WiP]
 
 This post is a humble attempt through bootstrapping prefix on nixos. I expect this to take a long time as nixos works with in a very different way and we'll look at it here. Don't worry if you are new with nixos I will initiate by introducing it.
 
-## Intro
+## Initial Bugs while bootstrapping
 
