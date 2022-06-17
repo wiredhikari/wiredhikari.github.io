@@ -8,31 +8,31 @@ tags = ["sob" , "nixos" , "minimint" ]
 +++
 Overview of the process of writing nix modules for minimint and nix-bitcoin.
 <!-- more -->
-## Overview:
+## Overview :
 
 I am new with writing blogs so please bear with me and ping me on how I can improve upon :) 
 
 ## Nix expression which builds Minimint's binary outputs
 
-### Nix-Shell :
+### Nix-Shell:
 
-### Nix-Build :
+### Nix-Build:
 
-### Setting up cachix :
+### Setting up cachix:
 
-### Nix-Flakes :
+### Nix-Flakes:
 
 
-### Github Actions : 
+### Github Actions: 
 Currently I have setup a working CI that tests flakes, nix-build, nix-shell and does integrations tests. We wanted a stable rust builder which allows granular caching and also supports sys crates.
 
 There aren't any stable rust builders in nix yet and so after testing all popular ones out there a.k.a cargo2nix, ceate2nix, naersk, crane, dream2nix; we narrowed them down to cargo2nix and crane. Cargo2nix doesn't support building -sys crates yet and crane isn't as good at caching as cargo2nix. So looking at the trade-off, we are using crane with flakes. 
 
-### Docker Containers :
+### Docker Containers:
 
-## Nix module in nix-bitcoin for Minimint :
+## Nix module in nix-bitcoin for Minimint:
 
-### Working with nix-bitcoin :
+### Working with nix-bitcoin:
 
 * To run  use ./deploy-qemu-vm.sh -i
 * 

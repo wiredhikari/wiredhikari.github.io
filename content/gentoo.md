@@ -24,28 +24,33 @@ Process of bootstrapping gentoo prefix on RISC-V architecture
 
 ### Setting up a profile for RISC-V:
 
+
+#todo - Issue -> link -> workaround
 ### Issues faced during Stage-1:
 
 ### Issues faced during Stage-2:
 
 * ncurses issue on plct machine and workaround :  https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/logs/stage1_logs/stage2.log
+
 * gcc error due to missing : https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/logs/stage2_logs/stage2.log
+
 ### Issues faced during Stage-3:
 * pam error https://github.com/wiredhikari/prefix_on_riscv/tree/main/logs/pam_error
 * portage eror https://github.com/wiredhikari/prefix_on_riscv/tree/main/logs/portage_error
 * pkg_conf error https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/logs/stage3/stage3.log
 
 ## Future Work:
-
-#to-add
+* We will have a working gentoo prefix working soon on RISC-V, then we will do rigerous testing of all three stages.
+* Write documentation on porting prefix to new architecture
+* Test and keyword packages for RISC-V.
 
 ## References:
 
 ### Repositories I am working on:
 
 * Documentation : https://github.com/wiredhikari/prefix_on_riscv
-* Prefix Fork  : https://github.com/wiredhikari/prefix
-* Gentoo Fork   : https://github.com/wiredhikari/portage
+* Prefix Fork : https://github.com/wiredhikari/prefix
+* Gentoo Fork : https://github.com/wiredhikari/portage
 
 ### Pull Requests:
 *  profiles: initial commits for riscv profile for prefix https://github.com/gentoo/gentoo/pull/25667
