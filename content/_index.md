@@ -1,6 +1,6 @@
  
 +++
 title = "hikari"
-Description = "Umm"
+Description = "Hikari's Hideout"
 +++
 Content
