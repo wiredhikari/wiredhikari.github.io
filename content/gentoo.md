@@ -5,7 +5,7 @@ date = 2022-06-15
 [taxonomies]
 tags = ["gsoc" , "gentoo" , "prefix" ]
 +++
-
+Process of bootstrapping gentoo prefix on RISC-V architecture
 <!-- more -->
 
 ## Overview
@@ -39,7 +39,7 @@ tags = ["gsoc" , "gentoo" , "prefix" ]
 
 #to-add
 
-## References
+## References:
 
 ### Repositories I am working on:
 

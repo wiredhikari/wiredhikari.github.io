@@ -6,9 +6,8 @@ date = 2022-06-15
 [taxonomies]
 tags = ["sob" , "nixos" , "minimint" ]
 +++
-
+Overview of the process of writing nix modules for minimint and nix-bitcoin.
 <!-- more -->
-
 ## Overview:
 
 I am new with writing blogs so please bear with me and ping me on how I can improve upon :) 
