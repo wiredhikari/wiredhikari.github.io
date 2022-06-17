@@ -7,10 +7,6 @@ date = 2022-06-15
 tags = ["sob" , "nixos" , "minimint" ]
 +++
 
-Bootstrapping Prefix to work on NixOS [WiP]
-
-
-
 <!-- more -->
 
 ## Overview:
