@@ -1,11 +1,15 @@
 +++
+
 title = "RISC-V Support for Gentoo Prefix"
 date = 2022-06-15
 
 [taxonomies]
 tags = ["gsoc" , "gentoo" , "prefix" ]
+
 +++
-Process of bootstrapping gentoo prefix on RISC-V architecture
+
+Process of bootstrapping gentoo prefix on RISC-V architecture.
+
 <!-- more -->
 
 ## Overview
@@ -24,7 +28,6 @@ Process of bootstrapping gentoo prefix on RISC-V architecture
 
 ### Setting up a profile for RISC-V:
 
-
 #todo - Issue -> link -> workaround
 ### Issues faced during Stage-1:
 
@@ -36,7 +39,9 @@ Process of bootstrapping gentoo prefix on RISC-V architecture
 
 ### Issues faced during Stage-3:
 * pam error https://github.com/wiredhikari/prefix_on_riscv/tree/main/logs/pam_error
+
 * portage eror https://github.com/wiredhikari/prefix_on_riscv/tree/main/logs/portage_error
+
 * pkg_conf error https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/logs/stage3/stage3.log
 
 ## Future Work:
@@ -44,7 +49,7 @@ Process of bootstrapping gentoo prefix on RISC-V architecture
 * Write documentation on porting prefix to new architecture
 * Test and keyword packages for RISC-V.
 
-## References:
+## References
 
 ### Repositories I am working on:
 
