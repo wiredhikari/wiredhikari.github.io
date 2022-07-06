@@ -10,53 +10,31 @@ Overview of the process of writing nix modules for minimint and nix-bitcoin.
 <!-- more -->
 
 ## Overview:
+
 &emsp; MiniMint is an implementation of federated e-cash written in rust. 
-
-
-
-
-
 To make deployment easier having a Nix module allowing to easily set up a federation. Nix allows to write entire system configurations as a single configuration file and to reproducibly build that system. As such it is well-suited for security-critical applications.
--  Give masala
--  Why nix
--  Start kahani
-    -  We started with nix-shell,
-    -  Then why we needed nix build
-    -  Optimizing build times
-    -  Using docker for non nix users
-    -  isme likh kyu use kra aur pathway ki kaha se kaha gae and niche vale me bas us topic ke upar baat kr
+
+&emsp; We have setup `nix-shell` which included necessary tools for development and integration testing. Then we have `nix-build` to install minimint using a single command, currently we are using `naersk` with it, using `niv` to manage dependancies and automating the process. We also have setup `nix-flake` to install minimint without actually cloning the repository and pinned package versions which offer more reproducibility, we are going with `crane` as of now. To optimize build times we use `cachix` and it helps to cache any Nix build result and hence helps in cutting down build times. Also looking at various ways to optimize and cut down build times in github actions. Setting up a minimint module in nix-bitcoin is in progress and will be usable soon. For non-nix users we have made `Dockerfile` which will install nix and minimint , also it can be used for integration testing.
 
 ---------------------------------------------
 
 ## Nix expression which builds Minimint's binary outputs
 
 ### Nix-Shell :
-&emsp; With nix-shell, we can create virtual environments per-project. When you enter nix-shell, the environment and all the dependencies are ready for use.
-- has all necessary resources for development 
-- nix-shell benefits
-- used for integration testing
+&emsp; With nix-shell, we can create virtual environments per-project. When you enter nix-shell, the environment and all the dependencies are ready for use.We will be able to benefit from nix's reproducibility. Our current nix-shell has all the necessary tools to build minimint and it saves a lot of time for developers and users to reproduce the same environment again.
 #### Porting integration tests in nix-shell
-- benefits
-- why do that
-- 
+&emsp; Currently integration tests are carried out from a bash script and eventually we plan to port them to nix as well, so that everything moves to nix and we avoid redundancy. 
 
 ### Nix-Build :
-&emsp; 
+&emsp; NIx-Builds -> Works on my machine, works in CI, works in production. Thats some superpowers of nix. We are using nix-build
 - to build minimint via nix
 - tools we currently use in nix build
 - benefits of nix build
 #### 
 
 ### Niv
-&emsp; 
-- why dependancy management
-- 
-### Setting up cachix :
-&emsp; 
-- benefits of cachix
-- how did we set it up
-- current condition
-- 
+&emsp; We need dependancy management to handle and upgrade toolchains with ease.`niv` simplifies adding and updating dependencies in Nix projects. It uses a single file, `nix/sources.json`, in which it stores the data necessary for fetching and updating the packages. We are currently using it for `naersk` and `nixpkgs`.
+
 
 ### Nix-Flakes :
 &emsp;Flakes allow you to specify your code's dependencies in a declarative way, simply by listing them inside a flake.nix. Each dependency gets then pinned, that is: its commit hash gets automatically stored into a file - named flake.lock - making it easy to, say, upgrade it
@@ -67,73 +45,54 @@ To make deployment easier having a Nix module allowing to easily set up a federa
 - how to use it
 - comparing with other nix tools
 - added support for non linux things like mac
-### crane
+
+### Crane :
 - multi arches support
-- 
+
+### Cargo2Nix :
+
+&emsp; There aren't any stable rust builders in nix yet and so after testing all popular ones out there a.k.a cargo2nix, ceate2nix, naersk, crane, dream2nix; we narrowed them down to cargo2nix and crane. Cargo2nix doesn't support building -sys crates yet and crane isn't as good at caching as cargo2nix. So looking at the trade-off, we are using crane with flakes. 
+
 ### Github Actions : 
 &emsp; Currently I have setup a working CI that tests flakes, nix-build, nix-shell and does integrations tests. We wanted a stable rust builder which allows granular caching and also supports sys crates.
 
-&emsp; There aren't any stable rust builders in nix yet and so after testing all popular ones out there a.k.a cargo2nix, ceate2nix, naersk, crane, dream2nix; we narrowed them down to cargo2nix and crane. Cargo2nix doesn't support building -sys crates yet and crane isn't as good at caching as cargo2nix. So looking at the trade-off, we are using crane with flakes. 
+### Setting up cachix :
+&emsp; 
+- benefits of cachix
+- how did we set it up
+- current condition
+- 
 #### Github actions powered by nix and cachix
+&emsp; 
 
 ### Docker Containers :
- - why did we set it up?
- - how is it working?
- - illustrate 
- - 
+&emsp; At this point in time docker is more widely used than nix and hence its easier for users to set it up and pull images. So we have setup `Dockerfile` to install minimint.
 
 ## Nix module in nix-bitcoin for Minimint :
- - 
-
-### Working with nix-bitcoin :
-
-* how to setup
-    * To run  use ./deploy-qemu-vm.sh -i
-    * c
-* prs and plans
-* current condition
-    * we dont have a minimint package in nixpkgs as we are in experimentation so we added it as a seperate package in nix-bitcoin itself
-* references
-* 
-
-### Documentation
-&emsp; 
-#### Installation
-&emsp; 
-#### Process
-&emsp; 
-####
-
+&emsp;[Nix-Bitcoin](https://github.com/fort-nix/nix-bitcoin) is a set of nix modules for easily installing full-featured Bitcoin nodes with an emphasis on security. Having minimint in nix-bitcoin will help in easy integrations with `cln` and `bitcoind`. Users can rely on nix rather than setting everything up manually.
+Overall the process of adding minimint in nix-bitcoin involves adding minimint as a module and then integrating with other tools. So far, we have added minimint as a [package](https://github.com/fedimint/nix-bitcoin/blob/minimint/pkgs/minimint/default.nix)   and soon we will have integrations with `cln` and `bitcoind` working. This will also be helpful in testing and 
 
 
 -----------------------------------------
 ## Future Work :
-- glipmse of current work
-    - optimizing ci is almost done just some addons
-    - nix-bitcoin is the major task remaining
 
 ### Optimizing CI :
-- current condition and additions
-- testing for different arches
-- see if we want to stick to github actions
-- 
+&emsp; So far we have setup github actions for testing and post that we worked on bringing down the build times, for the upcoming coding period I will work on making it more efficient and fast.
 
-### nix-bitcoin :
-- see how to make this work 
+### Nix-Bitcoin :
+&emsp; Currently we have minimint [package](https://github.com/fedimint/nix-bitcoin/blob/minimint/pkgs/minimint/default.nix) within nix-bitcoin itself, in the upcoming coding period we will be working on integrations of `cln` and `bitcoind`. 
 
 ### Rigorous Testing and Documentation :
-- testing on different machines like elsirion said
-- thanks to nix we dont need to worry much about one thing breaking on different systems except we need to see for arches
-- documenting
+&emsp; So far we have setup github actions for testing and after that we started testing on different systems like M1, raspi and ARM. Thanks to nix we dont need to worry much about one configuration breaking on different machines. Documentation on CI/CD, nix-builds and of nix-bitcoin will be worked.
 
------------------------------------------
+----------------------------------------
 
 ## References
 
 ### Repositories I am working on:
 * Minimint - https://github.com/fedimint/minimint
-* Fork of nix-bitcoin on fedimint - https://github.com/fedimint/nix-bitcoin
-* Dockerizing minimint -  https://github.com/fedimint/minimint-docker
+* Fork of nix-bitcoin on Fedimint - https://github.com/fedimint/nix-bitcoin
+* Dockerizing Minimint -  https://github.com/fedimint/minimint-docker
 * secp256k1_zkp_flake - https://github.com/wiredhikari/secp256k1_zkp_flake
 * Blogs and Documentation - https://github.com/wiredhikari/nix_minimint
 
@@ -155,6 +114,7 @@ To make deployment easier having a Nix module allowing to easily set up a federa
 * cachix: switching to auth token [#164](https://github.com/fedimint/minimint/pull/164)
 * actions: run cachix only on fedimint/minimint [#170](https://github.com/fedimint/minimint/pull/170)
 *  niv: updating nixpkgs to pull latest packages [#202](https://github.com/fedimint/minimint/pull/202) 
+*   cachix: enabling cachix to run on forks [#214](https://github.com/fedimint/minimint/pull/214) 
 * docs:Adding minimint in application services: [#1](https://github.com/fedimint/nix-bitcoin/pull/1)
 
 ### Link to Issues 
@@ -169,7 +129,6 @@ To make deployment easier having a Nix module allowing to easily set up a federa
 * nearsk unable to find certain packages: [#244](https://github.com/nix-community/naersk/issues/244)
 * cargo2nix unable to find certain packages: [#277](https://github.com/cargo2nix/cargo2nix/issues/277)
 
-
 ### Resources :
 * Some Rust builders:
     * [crane](https://github.com/ipetkov/crane)
@@ -177,7 +136,7 @@ To make deployment easier having a Nix module allowing to easily set up a federa
     * [naersk](https://github.com/nix-community/naersk)
     * [crate2nix](https://github.com/kolloch/crate2nix)
     * [dream2nix](https://github.com/nix-community/dream2nix)
-    * [Docs on Packaging in Rust](https://nixos.org/manual/nixpkgs/stable/#rust)
+    * [Docs for Packaging in Rust](https://nixos.org/manual/nixpkgs/stable/#rust)
 * Nix toolchains we used:
     * [nix-flakes](https://nixos.wiki/wiki/Flakes)
     * [cachix](https://docs.cachix.org/)
