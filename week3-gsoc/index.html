@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hikari&#x27;s Hideout</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://atharva.io/style.css">
+    <link rel="stylesheet" href="https://atharva.io/color/blue.css">
+
+        <link rel="stylesheet" href="https://atharva.io/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://atharva.io/font-hack.css">
+
+        <link rel="shortcut icon" type="image&amp;#x2F;x-icon" href="/favicon.png">
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://atharva.io" style="text-decoration: none;">
+                    <div class="logo">
+                            Hikari&#x27;s Hideout
+                        </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__inner">
+                
+                <li class="active"><a href="https://atharva.io">blog</a></li>
+            
+                <li><a href="https://atharva.io/tags">tags</a></li>
+            
+                <li><a href="https://atharva.io/archive">archive</a></li>
+            
+                <li><a href="https://atharva.io/about">about me</a></li>
+            
+                <li><a href="https://github.com/wiredhikari/" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://atharva.io/week3-gsoc/">Week 3 Report </a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2022-07-01
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/gsoc/">#gsoc</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/gentoo/">#gentoo</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/prefix/">#prefix</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>Week 3 Report for RISC-V Support for Gentoo Prefix</p>
+<span id="continue-reading"></span>
+<p>Hello all,</p>
+<p>The 3rd week of my GSoC project has come to an end and this is the brief overview of the progress so far.</p>
+<p>To start with, most of the week has been spent on testing, we have decided upon a non-gentoo riscv environment for testing and are finally able to get <code>emerge -u system</code> working, (128/143) packages have been compiled so far and we can will get it working soon. We also have profiles for risc-v merged in Gentoo. Have also been working on a new profile for lp64d no-multilib and sent the pr for the same <a href="https://github.com/gentoo/gentoo/pull/26211">3</a>.</p>
+<p>During the week we tried several non-gentoo riscv environments for testing like fedora,ubuntu riscv qemu and freedom-u-sdk<a href="https://github.com/sifive/freedom-u-sdk">1</a>. The environment of freedom-u-sdk seems to be working great and is minimal, also doesnt give much errors like other images, so we have decided to settle on it.</p>
+<p>During stage 2 it was noticed that missing <code>libfl.so.2</code> lib on host caused several <code>sys-libs/attr</code> to fail and it has been fixed. This didn't occur in other riscv environments so seems to be a <code>freedom-u-sdk</code> specific issue. Similarly, missing <code>libtinfo.so</code> lib caused issues for <code>sys-devel/gettext</code>.</p>
+<p>So far I have been testing the new profile with my custom bootstrap-prefix.sh script <a href="https://raw.githubusercontent.com/wiredhikari/prefix/kernel/scripts/bootstrap-prefix.sh">4</a> and added a new profile in for lp64d riscv <a href="https://github.com/gentoo/gentoo/pull/26211">3</a>; will push the changes to upstream and get reviews for the same. There are some ambiguities with freedom-u-sdk host libraries, will dig more to check if we can make bootstrap script more independant from host.Talking about the upcoming plans,I plan to do testing on various machines. Currently last 15 packages are bring compiled while writing this, python and glibc might are expected to give some errors, stage 3 we will have a working riscv profile soon if the compilation gets successful.I am collecting logs and the issues faced during bootstrap <a href="https://github.com/wiredhikari/prefix_on_riscv">2</a> which will eventuall help in documentation of &quot;Porting Prefix to new Architecture&quot;.</p>
+<p>So this is the report of things accomplished in Week 3. Mentors have been immensely helpful, looking forward to next week.</p>
+<hr />
+<p>Regards,
+wiredhikari</p>
+
+        </div>
+
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2022
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hikari&#x27;s Hideout</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://atharva.io/style.css">
+    <link rel="stylesheet" href="https://atharva.io/color/blue.css">
+
+        <link rel="stylesheet" href="https://atharva.io/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://atharva.io/font-hack.css">
+
+        <link rel="shortcut icon" type="image&amp;#x2F;x-icon" href="/favicon.png">
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://atharva.io" style="text-decoration: none;">
+                    <div class="logo">
+                            Hikari&#x27;s Hideout
+                        </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__inner">
+                
+                <li class="active"><a href="https://atharva.io">blog</a></li>
+            
+                <li><a href="https://atharva.io/tags">tags</a></li>
+            
+                <li><a href="https://atharva.io/archive">archive</a></li>
+            
+                <li><a href="https://atharva.io/about">about me</a></li>
+            
+                <li><a href="https://github.com/wiredhikari/" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://atharva.io/week2-gsoc/">Week 2 Report </a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2022-06-25
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/gsoc/">#gsoc</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/gentoo/">#gentoo</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/prefix/">#prefix</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>Week 2 Report for RISC-V Support for Gentoo Prefix</p>
+<span id="continue-reading"></span>
+<p>Greetings,</p>
+<p>Hope you all are doing good, the second week of coding period is over, it has been fun and quite some progress on the project has happened. To start with, I tested the new riscv profile for prefix on different riscv machines/images, have updated the changes and rebased the pull request [1]. After adding support to packages as discussed in last week's blog, I did testing for stage 1 and 2 on various machines and they got compiled without any trouble. </p>
+<p>During testing, the major bug it was seen that pkgconf failed due to missing <code>CHOST</code>, we which will be fixed by patching it for <code>riscv</code> in bootstrap script. </p>
+<p>Also, encountered portage falling back to root/portage and user/group in the gentoo chroot environment, similar to [2]. Host portage interfers with prefix installation. So, the current progress is that stage 3 stops towards the end as it ain't able to run <code>emerge -uDNv system</code> on the system with gentoo host and asks for root access. Although it will continue on non-gentoo host, which we will be testing further. To test further we are working with freedom-u-sdk [3] and a fedora riscv qemu image to test prefix.</p>
+<p>So, this is the brief report for the second week, for the upcoming weeks I will be working more on testing and fixing the issues during stage 3. Thanks to Kenneth Hoste for setting up the shared VM to experiment with emulated RISC-V environment. Also had a fruitful discussions with Guilherme Amadio for the current issues in stage 3 and their workarounds, we will look into them and hope we get a working stage 3 soon.</p>
+<p>Regards,
+Atharva</p>
+<p>[1] https://github.com/gentoo/gentoo/pull/25667
+[2] https://bugs.gentoo.org/766417
+[3] https://github.com/sifive/freedom-u-sdk</p>
+
+        </div>
+
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2022
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

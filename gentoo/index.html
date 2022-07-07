@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hikari&#x27;s Hideout</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://atharva.io/style.css">
+    <link rel="stylesheet" href="https://atharva.io/color/blue.css">
+
+        <link rel="stylesheet" href="https://atharva.io/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://atharva.io/font-hack.css">
+
+        <link rel="shortcut icon" type="image&amp;#x2F;x-icon" href="/favicon.png">
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://atharva.io" style="text-decoration: none;">
+                    <div class="logo">
+                            Hikari&#x27;s Hideout
+                        </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__inner">
+                
+                <li class="active"><a href="https://atharva.io">blog</a></li>
+            
+                <li><a href="https://atharva.io/tags">tags</a></li>
+            
+                <li><a href="https://atharva.io/archive">archive</a></li>
+            
+                <li><a href="https://atharva.io/about">about me</a></li>
+            
+                <li><a href="https://github.com/wiredhikari/" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://atharva.io/gentoo/">RISC-V Support for Gentoo Prefix</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2022-06-15
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/gsoc/">#gsoc</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/gentoo/">#gentoo</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/prefix/">#prefix</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>Process of bootstrapping gentoo prefix on RISC-V architecture.</p>
+<span id="continue-reading"></span><h2 id="overview">Overview</h2>
+<h2 id="workflow">Workflow</h2>
+<h3 id="machines-used-for-development">Machines used for development:</h3>
+<h4 id="riscv-chroot-env">riscv-chroot-env</h4>
+<h4 id="plct-lab">plct-lab</h4>
+<h4 id="qemu-image">qemu image</h4>
+<h2 id="current-progress">Current Progress:</h2>
+<h3 id="setting-up-a-profile-for-risc-v">Setting up a profile for RISC-V:</h3>
+<p>#todo - Issue -&gt; link -&gt; workaround</p>
+<h3 id="issues-faced-during-stage-1">Issues faced during Stage-1:</h3>
+<h3 id="issues-faced-during-stage-2">Issues faced during Stage-2:</h3>
+<ul>
+<li>
+<p>ncurses issue on plct machine and workaround :  https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/logs/stage1_logs/stage2.log</p>
+</li>
+<li>
+<p>gcc error due to missing : https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/logs/stage2_logs/stage2.log</p>
+</li>
+</ul>
+<h3 id="issues-faced-during-stage-3">Issues faced during Stage-3:</h3>
+<ul>
+<li>
+<p>pam error https://github.com/wiredhikari/prefix_on_riscv/tree/main/logs/pam_error</p>
+</li>
+<li>
+<p>portage eror https://github.com/wiredhikari/prefix_on_riscv/tree/main/logs/portage_error</p>
+</li>
+<li>
+<p>pkg_conf error https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/logs/stage3/stage3.log</p>
+</li>
+</ul>
+<h2 id="future-work">Future Work:</h2>
+<ul>
+<li>We will have a working gentoo prefix working soon on RISC-V, then we will do rigerous testing of all three stages.</li>
+<li>Write documentation on porting prefix to new architecture</li>
+<li>Test and keyword packages for RISC-V.</li>
+</ul>
+<h2 id="references">References</h2>
+<h3 id="repositories-i-am-working-on">Repositories I am working on:</h3>
+<ul>
+<li>Documentation : https://github.com/wiredhikari/prefix_on_riscv</li>
+<li>Prefix Fork : https://github.com/wiredhikari/prefix</li>
+<li>Gentoo Fork : https://github.com/wiredhikari/portage</li>
+</ul>
+<h3 id="pull-requests">Pull Requests:</h3>
+<ul>
+<li>profiles: initial commits for riscv profile for prefix https://github.com/gentoo/gentoo/pull/25667</li>
+<li>app-misc/pax-utils: Add prefix support https://github.com/gentoo/gentoo/pull/25855</li>
+<li>sys-libs/pam: Add prefix support https://github.com/gentoo/gentoo/pull/25850</li>
+<li>bootstrap-prefix.sh: adding riscv profile #6  https://github.com/gentoo/prefix/pull/6</li>
+</ul>
+
+        </div>
+
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2022
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

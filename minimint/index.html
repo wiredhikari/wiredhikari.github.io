@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hikari&#x27;s Hideout</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://atharva.io/style.css">
+    <link rel="stylesheet" href="https://atharva.io/color/blue.css">
+
+        <link rel="stylesheet" href="https://atharva.io/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://atharva.io/font-hack.css">
+
+        <link rel="shortcut icon" type="image&amp;#x2F;x-icon" href="/favicon.png">
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://atharva.io" style="text-decoration: none;">
+                    <div class="logo">
+                            Hikari&#x27;s Hideout
+                        </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__inner">
+                
+                <li class="active"><a href="https://atharva.io">blog</a></li>
+            
+                <li><a href="https://atharva.io/tags">tags</a></li>
+            
+                <li><a href="https://atharva.io/archive">archive</a></li>
+            
+                <li><a href="https://atharva.io/about">about me</a></li>
+            
+                <li><a href="https://github.com/wiredhikari/" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://atharva.io/minimint/">Building a Nix Module for MiniMint</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2022-06-15
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/sob/">#sob</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/nixos/">#nixos</a>&nbsp;
+                <a class="post-tag" href="https://atharva.io/tags/minimint/">#minimint</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>Overview of the process of writing nix modules for minimint and nix-bitcoin.</p>
+<span id="continue-reading"></span><h2 id="overview">Overview:</h2>
+<p>  MiniMint is an implementation of federated e-cash written in rust. 
+To make deployment easier having a Nix module allowing to easily set up a federation. Nix allows to write entire system configurations as a single configuration file and to reproducibly build that system. As such it is well-suited for security-critical applications.</p>
+<p>  We have setup <code>nix-shell</code> which included necessary tools for development and integration testing. Then we have <code>nix-build</code> to install minimint using a single command, currently we are using <code>naersk</code> with it, using <code>niv</code> to manage dependancies and automating the process. We also have setup <code>nix-flake</code> to install minimint without actually cloning the repository and pinned package versions which offer more reproducibility, we are going with <code>crane</code> as of now. To optimize build times we use <code>cachix</code> and it helps to cache any Nix build result and hence helps in cutting down build times. Also looking at various ways to optimize and cut down build times in github actions. Setting up a minimint module in nix-bitcoin is in progress and will be usable soon. For non-nix users we have made <code>Dockerfile</code> which will install nix and minimint , also it can be used for integration testing.</p>
+<hr />
+<h2 id="nix-expression-which-builds-minimint-s-binary-outputs">Nix expression which builds Minimint's binary outputs</h2>
+<h3 id="nix-shell">Nix-Shell :</h3>
+<p>  With nix-shell, we can create virtual environments per-project. When you enter nix-shell, the environment and all the dependencies are ready for use.We will be able to benefit from nix's reproducibility. Our current nix-shell has all the necessary tools to build minimint and it saves a lot of time for developers and users to reproduce the same environment again.</p>
+<h4 id="porting-integration-tests-in-nix-shell">Porting integration tests in nix-shell</h4>
+<p>  Currently integration tests are carried out from a bash script and eventually we plan to port them to nix as well, so that everything moves to nix and we avoid redundancy. </p>
+<h3 id="nix-build">Nix-Build :</h3>
+<p>  Nix-Builds -&gt; Works on all machines, works in CI, works in production. Thats some superpowers of nix. We are using Nix-Build to build minimint with naersk.</p>
+<h3 id="niv">Niv</h3>
+<p>  We need dependancy management to handle and upgrade toolchains with ease.<code>niv</code> simplifies adding and updating dependencies in Nix projects. It uses a single file, <code>nix/sources.json</code>, in which it stores the data necessary for fetching and updating the packages. We are currently using it for <code>naersk</code> and <code>nixpkgs</code>.</p>
+<h3 id="nix-flakes">Nix-Flakes :</h3>
+<p>  Flakes are a new feature in Nix ecosystem. They allow you to specify your code's dependencies in a declarative way, simply by listing them inside a flake.nix. Each dependency gets then pinned, that is: its commit hash gets automatically stored into a file - named flake.lock - making it easy to, say, upgrade it. It supports several architectures and also has support for M1 chip. </p>
+<h3 id="crane">Crane :</h3>
+<p>  We are using Crane as a rust builder with Nix-Flakes. It is composible and split builds and tests into granular steps. Gate CI without burdening downstream consumers building from source. It is incremental and build your workspace dependencies just once, then quickly lint, build, and test changes to your project without slowing down.</p>
+<h3 id="cargo2nix">Cargo2Nix :</h3>
+<p>  There aren't any stable rust builders in nix yet and so after testing all popular ones out there a.k.a cargo2nix, ceate2nix, naersk, crane, dream2nix; we narrowed them down to cargo2nix and crane. Cargo2nix doesn't support building <code>sys</code> crates yet and crane isn't as good at caching as cargo2nix. So looking at the trade-off, we are using crane with flakes. I am working on fixing it upstream.</p>
+<h3 id="github-actions">Github Actions :</h3>
+<p>  Currently I have setup a working CI that tests flakes, nix-build, nix-shell and does integrations tests. We wanted a stable rust builder which allows granular caching and also supports sys crates.</p>
+<h3 id="setting-up-cachix">Setting up cachix :</h3>
+<p>  With Nix and Cachix we can cache any Nix build result. Nix can fetch a binary result instead of performing the build by looking up store hash in binary cache API.  CI can build and cache developer environments for every project on every branch using binary caches. </p>
+<h3 id="docker-containers">Docker Containers :</h3>
+<p>  At this point in time docker is more widely used than nix and hence its easier for users to set it up and pull images. So we have setup <code>Dockerfile</code> to install minimint. We also have setup <code>Dockerfile.integrationtest</code> for doing integrations tests without installing nix.</p>
+<h2 id="nix-module-in-nix-bitcoin-for-minimint">Nix module in nix-bitcoin for Minimint :</h2>
+<p> <a href="https://github.com/fort-nix/nix-bitcoin">Nix-Bitcoin</a> is a set of nix modules for easily installing full-featured Bitcoin nodes with an emphasis on security. Having minimint in nix-bitcoin will help in easy integrations with <code>cln</code> and <code>bitcoind</code>. Users can rely on nix rather than setting everything up manually.
+Overall the process of adding minimint in nix-bitcoin involves adding minimint as a module and then integrating with other tools. So far, we have added minimint as a <a href="https://github.com/fedimint/nix-bitcoin/blob/minimint/pkgs/minimint/default.nix">package</a>   and soon we will have integrations with <code>cln</code> and <code>bitcoind</code> working. This will also be helpful in testing and </p>
+<hr />
+<h2 id="future-work">Future Work :</h2>
+<h3 id="optimizing-ci">Optimizing CI :</h3>
+<p>  So far we have setup github actions for testing and post that we worked on bringing down the build times, for the upcoming coding period I will work on making it more efficient and fast.</p>
+<h3 id="nix-bitcoin">Nix-Bitcoin :</h3>
+<p>  Currently we have minimint <a href="https://github.com/fedimint/nix-bitcoin/blob/minimint/pkgs/minimint/default.nix">package</a> within nix-bitcoin itself, in the upcoming coding period we will be working on integrations of <code>cln</code> and <code>bitcoind</code>. </p>
+<h3 id="rigorous-testing-and-documentation">Rigorous Testing and Documentation :</h3>
+<p>  So far we have setup github actions for testing and after that we started testing on different systems like M1, raspi and ARM. Thanks to nix we dont need to worry much about one configuration breaking on different machines. Documentation on CI/CD, nix-builds and of nix-bitcoin will be worked.</p>
+<hr />
+<h2 id="references">References</h2>
+<h3 id="repositories-i-am-working-on">Repositories I am working on:</h3>
+<ul>
+<li>Minimint - https://github.com/fedimint/minimint</li>
+<li>Fork of nix-bitcoin on Fedimint - https://github.com/fedimint/nix-bitcoin</li>
+<li>Dockerizing Minimint -  https://github.com/fedimint/minimint-docker</li>
+<li>secp256k1_zkp_flake - https://github.com/wiredhikari/secp256k1_zkp_flake</li>
+<li>Blogs and Documentation - https://github.com/wiredhikari/nix_minimint</li>
+</ul>
+<h3 id="pull-requests">Pull Requests:</h3>
+<ul>
+<li>nix: adding nix shell support: <a href="https://github.com/fedimint/minimint/pull/45">#45</a></li>
+<li>Nix expression to build minimint’s binary outputs: <a href="https://github.com/fedimint/minimint/pull/60">#60</a></li>
+<li>Optimizing Build times: <a href="https://github.com/fedimint/minimint/pull/73">#73</a></li>
+<li>Docker container that builds nix scripts and integration tests <a href="https://github.com/fedimint/minimint/pull/83">#83</a></li>
+<li>Cleaning up yaml file: <a href="https://github.com/fedimint/minimint/pull/91">#91</a></li>
+<li>Masking Fenix: <a href="https://github.com/fedimint/minimint/pull/92">#92</a></li>
+<li>Fixing the broken nix-build: <a href="https://github.com/fedimint/minimint/pull/98">#98</a></li>
+<li>Updating the links to rust-secp256k1-zkp repo: <a href="https://github.com/fedimint/minimint/pull/108">#108</a></li>
+<li>Dockerfile for building nix-builds: <a href="https://github.com/fedimint/minimint/pull/110">#110</a></li>
+<li>Adding tests for nix-build: <a href="https://github.com/fedimint/minimint/pull/111">#111</a></li>
+<li>pulling back naersk to older version for fixing nix-build: <a href="https://github.com/fedimint/minimint/pull/135">#135</a></li>
+<li>Flakifying minimint: <a href="https://github.com/fedimint/minimint/pull/147">#147</a></li>
+<li>docs: adding docs for nix: <a href="https://github.com/fedimint/minimint/pull/154">#154</a></li>
+<li>cachix: switching to auth token <a href="https://github.com/fedimint/minimint/pull/164">#164</a></li>
+<li>actions: run cachix only on fedimint/minimint <a href="https://github.com/fedimint/minimint/pull/170">#170</a></li>
+<li>niv: updating nixpkgs to pull latest packages <a href="https://github.com/fedimint/minimint/pull/202">#202</a> </li>
+<li>cachix: enabling cachix to run on forks <a href="https://github.com/fedimint/minimint/pull/214">#214</a> </li>
+<li>docs:Adding minimint in application services: <a href="https://github.com/fedimint/nix-bitcoin/pull/1">#1</a></li>
+</ul>
+<h3 id="link-to-issues">Link to Issues</h3>
+<ul>
+<li>Figure out how to make the Nix CI build faster: <a href="https://github.com/fedimint/minimint/issues/67">#67</a></li>
+<li>default.nix doesn't build locally on stable NixOS: <a href="https://github.com/fedimint/minimint/issues/78">#78</a></li>
+<li>Fix default.nix build: <a href="https://github.com/fedimint/minimint/issues/90">#90</a></li>
+<li>CI: Caching for integration test is broken: <a href="https://github.com/fedimint/minimint/issues/103">#103</a></li>
+<li>CI: @action-rs/toochain is not needed in integration test: <a href="https://github.com/fedimint/minimint/issues/105">#105</a></li>
+<li>Integration Tests: lightning-cli enters infinite loop: <a href="https://github.com/fedimint/minimint/issues/138">#138</a></li>
+<li>Run cachix action only run on fedimint/minimint repo and not on forks <a href="https://github.com/fedimint/minimint/issues/169">#169</a> </li>
+<li>nearsk unable to find certain packages: <a href="https://github.com/nix-community/naersk/issues/244">#244</a></li>
+<li>cargo2nix unable to find certain packages: <a href="https://github.com/cargo2nix/cargo2nix/issues/277">#277</a></li>
+</ul>
+<h3 id="resources">Resources :</h3>
+<ul>
+<li>Some Rust builders:
+<ul>
+<li><a href="https://github.com/ipetkov/crane">crane</a></li>
+<li><a href="https://github.com/cargo2nix/cargo2nix">cargo2nix</a></li>
+<li><a href="https://github.com/nix-community/naersk">naersk</a></li>
+<li><a href="https://github.com/kolloch/crate2nix">crate2nix</a></li>
+<li><a href="https://github.com/nix-community/dream2nix">dream2nix</a></li>
+<li><a href="https://nixos.org/manual/nixpkgs/stable/#rust">Docs for Packaging in Rust</a></li>
+</ul>
+</li>
+<li>Nix toolchains we used:
+<ul>
+<li><a href="https://nixos.wiki/wiki/Flakes">nix-flakes</a></li>
+<li><a href="https://docs.cachix.org/">cachix</a></li>
+<li><a href="https://nixos.org/manual/nix/stable/command-ref/nix-shell.html">nix-shell</a></li>
+<li><a href="https://nixos.org/manual/nix/stable/command-ref/nix-build.html">nix-build</a></li>
+<li><a href="https://github.com/nmattia/niv">niv</a></li>
+<li><a href="https://github.com/nix-community/fenix">fenix</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+
+        </div>
+
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2022
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
