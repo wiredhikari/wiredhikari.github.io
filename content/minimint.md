@@ -9,6 +9,7 @@ tags = ["sob" , "nixos" , "minimint" ]
 Overview of the process of writing nix modules for minimint and nix-bitcoin.
 <!-- more -->
 
+
 ## Overview:
 
 &emsp; MiniMint is an implementation of federated e-cash written in rust. 
@@ -26,47 +27,31 @@ To make deployment easier having a Nix module allowing to easily set up a federa
 &emsp; Currently integration tests are carried out from a bash script and eventually we plan to port them to nix as well, so that everything moves to nix and we avoid redundancy. 
 
 ### Nix-Build :
-&emsp; NIx-Builds -> Works on my machine, works in CI, works in production. Thats some superpowers of nix. We are using nix-build
-- to build minimint via nix
-- tools we currently use in nix build
-- benefits of nix build
-#### 
+&emsp; Nix-Builds -> Works on all machines, works in CI, works in production. Thats some superpowers of nix. We are using Nix-Build to build minimint with naersk.
+
 
 ### Niv
 &emsp; We need dependancy management to handle and upgrade toolchains with ease.`niv` simplifies adding and updating dependencies in Nix projects. It uses a single file, `nix/sources.json`, in which it stores the data necessary for fetching and updating the packages. We are currently using it for `naersk` and `nixpkgs`.
 
 
 ### Nix-Flakes :
-&emsp;Flakes allow you to specify your code's dependencies in a declarative way, simply by listing them inside a flake.nix. Each dependency gets then pinned, that is: its commit hash gets automatically stored into a file - named flake.lock - making it easy to, say, upgrade it
-&emsp;
-- benefits of flakes
-- how did we set it up
-- current condition
-- how to use it
-- comparing with other nix tools
-- added support for non linux things like mac
+&emsp; Flakes are a new feature in Nix ecosystem. They allow you to specify your code's dependencies in a declarative way, simply by listing them inside a flake.nix. Each dependency gets then pinned, that is: its commit hash gets automatically stored into a file - named flake.lock - making it easy to, say, upgrade it. It supports several architectures and also has support for M1 chip. 
 
 ### Crane :
-- multi arches support
+&emsp; We are using Crane as a rust builder with Nix-Flakes. It is composible and split builds and tests into granular steps. Gate CI without burdening downstream consumers building from source. It is incremental and build your workspace dependencies just once, then quickly lint, build, and test changes to your project without slowing down.
 
 ### Cargo2Nix :
 
-&emsp; There aren't any stable rust builders in nix yet and so after testing all popular ones out there a.k.a cargo2nix, ceate2nix, naersk, crane, dream2nix; we narrowed them down to cargo2nix and crane. Cargo2nix doesn't support building -sys crates yet and crane isn't as good at caching as cargo2nix. So looking at the trade-off, we are using crane with flakes. 
+&emsp; There aren't any stable rust builders in nix yet and so after testing all popular ones out there a.k.a cargo2nix, ceate2nix, naersk, crane, dream2nix; we narrowed them down to cargo2nix and crane. Cargo2nix doesn't support building `sys` crates yet and crane isn't as good at caching as cargo2nix. So looking at the trade-off, we are using crane with flakes. I am working on fixing it upstream.
 
 ### Github Actions : 
 &emsp; Currently I have setup a working CI that tests flakes, nix-build, nix-shell and does integrations tests. We wanted a stable rust builder which allows granular caching and also supports sys crates.
 
 ### Setting up cachix :
-&emsp; 
-- benefits of cachix
-- how did we set it up
-- current condition
-- 
-#### Github actions powered by nix and cachix
-&emsp; 
+&emsp; With Nix and Cachix we can cache any Nix build result. Nix can fetch a binary result instead of performing the build by looking up store hash in binary cache API.  CI can build and cache developer environments for every project on every branch using binary caches. 
 
 ### Docker Containers :
-&emsp; At this point in time docker is more widely used than nix and hence its easier for users to set it up and pull images. So we have setup `Dockerfile` to install minimint.
+&emsp; At this point in time docker is more widely used than nix and hence its easier for users to set it up and pull images. So we have setup `Dockerfile` to install minimint. We also have setup `Dockerfile.integrationtest` for doing integrations tests without installing nix.
 
 ## Nix module in nix-bitcoin for Minimint :
 &emsp;[Nix-Bitcoin](https://github.com/fort-nix/nix-bitcoin) is a set of nix modules for easily installing full-featured Bitcoin nodes with an emphasis on security. Having minimint in nix-bitcoin will help in easy integrations with `cln` and `bitcoind`. Users can rely on nix rather than setting everything up manually.
