@@ -1,3 +1,16 @@
+
++++
+title = "Building a Nix Module for Fedimint"
+date = 2022-08-18
+
+[taxonomies]
+tags = ["sob" , "nixos" , "minimint" ]
++++
+Overview of the process of writing nix modules for Fedimint in Nix-Bitcoin.
+<!-- more -->
+
+
+
 # Nix Module of Fedimint in Nix-Bitcoin
 ---------------
 
