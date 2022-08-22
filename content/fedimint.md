@@ -105,7 +105,8 @@ I like exploring new tools and technologies, and what's a better way to learn th
 - Get rid of "minimint" [#9](https://github.com/fedimint/nix-bitcoin/issues/9)
 - Get rid of dbDir [#10](https://github.com/fedimint/nix-bitcoin/issues/10)
 - Signet support [#532](https://github.com/fort-nix/nix-bitcoin/issues/532)
--  Client should connect to federation via Tor [#391](https://github.com/fedimint/fedimint/issues/391)
+- Client should connect to federation via Tor [#391](https://github.com/fedimint/fedimint/issues/391)
+- Migrate wasm build to nix-ci [#441](https://github.com/fedimint/fedimint/issues/441) 
  
 ### Fixing Other Issues:
 I am also getting my hands on Rust and will soon start solving Fedimint's code base related [issues](https://github.com/fedimint/fedimint/issues). 
