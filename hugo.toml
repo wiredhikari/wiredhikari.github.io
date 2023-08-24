@@ -1,6 +1,6 @@
 baseurl = "https://www.atharva.io"
 title = "wiredhikari"
-theme = "hugo-coder"
+theme = "hugo"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
