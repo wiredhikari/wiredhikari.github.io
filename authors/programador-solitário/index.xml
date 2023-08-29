@@ -5,14 +5,13 @@
     <link>https://www.atharva.io/authors/programador-solit%C3%A1rio/</link>
     <description>Recent content in Programador Solitário on wiredhikari</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/authors/programador-solit%C3%A1rio/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://www.atharva.io/authors/programador-solit%C3%A1rio/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Suporte a Emojis</title>
-      <link>https://www.atharva.io/posts/emoji-support.pt-br/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      <title>RISC-V support for Gentoo Prefix</title>
+      <link>https://www.atharva.io/posts/gsoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.atharva.io/posts/emoji-support.pt-br/</guid>
+      <guid>https://www.atharva.io/posts/gsoc/</guid>
       <description>&lt;p&gt;Emojis podem ser ativados em um projeto Hugo de diversar formas.&lt;/p&gt;</description>
     </item>
     

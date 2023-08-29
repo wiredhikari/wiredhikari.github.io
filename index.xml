@@ -6,14 +6,14 @@
     <description>Recent content on wiredhikari</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Suporte a Emojis</title>
+      <title>RISC-V support for Gentoo Prefix</title>
       <link>https://www.atharva.io/posts/emoji-support.pt-br/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.atharva.io/posts/emoji-support.pt-br/</guid>
-      <description>&lt;p&gt;Emojis podem ser ativados em um projeto Hugo de diversar formas.&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -40,9 +40,8 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.atharva.io/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:
-https://github.com/yuin/goldmark https://github.</description>
+      <description>Hello, I am Atharva Amritkar, a 4th yr undergraduate student in IIT Kharagpur. I am from Pune
+Professionally, I have done various open source programs like GSoC, Summer of Bitcoin during my sophomore year and while doing these programs I found my interests in decentralised finance, crypto economics and blockchain in general. So during my third yr I did several Defi and web3 based internships, and also was called by government of Canada for a research internship in the field of blockchain, where I worked on integrating zk proofs and blockchain with hospitals and worked on crypto economics there.</description>
     </item>
     
     <item>
@@ -61,6 +60,15 @@ https://github.com/yuin/goldmark https://github.</description>
       
       <guid>https://www.atharva.io/projects/</guid>
       <description>Nothing to see here&amp;hellip; Move along!!!</description>
+    </item>
+    
+    <item>
+      <title>RISC-V support for Gentoo Prefix</title>
+      <link>https://www.atharva.io/posts/gsoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/gsoc/</guid>
+      <description>&lt;p&gt;Emojis podem ser ativados em um projeto Hugo de diversar formas.&lt;/p&gt;</description>
     </item>
     
   </channel>
