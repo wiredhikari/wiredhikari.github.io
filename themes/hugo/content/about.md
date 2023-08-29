@@ -1,25 +1,15 @@
 +++
 title = "About"
-description = "Hugo, the world's fastest framework for building websites"
+description = "Hello afjkl;agjasflkgjkl;    "
 date = "2019-02-28"
 aliases = ["about-us", "about-hugo", "contact"]
 author = "Hugo Authors"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hello, I am Atharva Amritkar, a 4th yr undergraduate student in IIT Kharagpur. I am from Pune
 
-Hugo makes use of a variety of open source projects including:
+Professionally, I have done various open source programs like GSoC, Summer of Bitcoin during my sophomore year and while doing these programs I found my interests in decentralised finance, crypto economics and blockchain in general. So during my third yr I did several Defi and web3 based internships, and also was called by government of Canada for a research internship in the field of blockchain, where I worked on integrating zk proofs and blockchain with hospitals and worked on crypto economics there. Also I worked with polygon technology where I was. a strategic growth consultant, then I worked with Aten ventures where I was a venture capital analyst intern and was a part of investment analyst team there
+With my entrepreneurial spirit I founded Zkare, which I pitched to vitalik buterin founder of ethereum protocol during Ethwaterloo and also received grants there. 
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
-
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
-
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Apart from this, I have been actively involved in multiple positions of responsibilities and extra curricular activities here at IIT Kharagpur.
+I have been a part of Koss since 4 yrs where I am an advisor now. Also founded blockchain society in IIT KGP where we teach students about decentralised finance, web3 and crypto economics.

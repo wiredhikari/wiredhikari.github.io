@@ -1,10 +1,10 @@
 +++
-authors = ["wiredhikari"]
+authors = ["Programador Solitário"]
 title = "RISC-V support for Gentoo Prefix"
-date = "2023-08-07"
+date = "2023-2001-07"
 description = "GSoC Final Report"
 tags = [
-   "gsoc",
+    "gsoc",
     "gentoo",
     "linux",
     "riscv",
@@ -12,7 +12,10 @@ tags = [
 categories = [
 
 ]
+series = ["Demonstração do Tema"]
 +++
+
+Emojis podem ser ativados em um projeto Hugo de diversar formas.
 
 <!--more-->
 
