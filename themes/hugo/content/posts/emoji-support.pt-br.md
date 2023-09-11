@@ -1,7 +1,7 @@
 +++
 authors = ["wiredhikari"]
 title = "RISC-V support for Gentoo Prefix"
-date = "2023-08-07"
+date = "2022-08-07"
 description = "GSoC Final Report"
 tags = [
    "gsoc",

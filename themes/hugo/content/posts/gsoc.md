@@ -1,7 +1,7 @@
 +++
 authors = ["Programador Solitário"]
 title = "RISC-V support for Gentoo Prefix"
-date = "2023-2001-07"
+date = "2022-09-17"
 description = "GSoC Final Report"
 tags = [
     "gsoc",
