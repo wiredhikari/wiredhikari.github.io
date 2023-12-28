@@ -11,10 +11,10 @@ style = "github-dark"
 
 [params]
   author = "wiredhikari"
-  info = "Just another open source fanboy and web3 researcher"
+  info = "Just another open source fanboy and crypto researcher"
   description = "hikari's warehouse"
   keywords = "blog,developer,personal"
-  avatarurl = "images/avatar.jpg"
+  avatarurl = "images/avatar.jpeg"
   gravatar = "atharvaamritkar@protonmail.com"
 
   faviconSVG = "/img/favicon.svg"
