@@ -8,6 +8,33 @@
     <language>en</language>
     <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://www.atharva.io/posts/mitacs/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/mitacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.atharva.io/posts/sperax/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/sperax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.atharva.io/posts/zkare/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/zkare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Introducing Ocean Protocol</title>
       <link>https://www.atharva.io/posts/ocean/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
@@ -17,20 +44,29 @@
     </item>
     
     <item>
-      <title>RISC-V support for Gentoo Prefix</title>
-      <link>https://www.atharva.io/posts/gsoc/</link>
-      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      <title>Summer of Nix</title>
+      <link>https://www.atharva.io/posts/son/</link>
+      <pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://www.atharva.io/posts/gsoc/</guid>
+      <guid>https://www.atharva.io/posts/son/</guid>
       <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://www.atharva.io/posts/sperax/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Contributing to Fedimint (A Federated E-Cash Mint on Bitcoin)</title>
+      <link>https://www.atharva.io/posts/sob/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://www.atharva.io/posts/sperax/</guid>
+      <guid>https://www.atharva.io/posts/sob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RISC-V support for Gentoo Prefix @GSoC</title>
+      <link>https://www.atharva.io/posts/gsoc/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/gsoc/</guid>
       <description></description>
     </item>
     

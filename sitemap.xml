@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.atharva.io/posts/mitacs/</loc>
+    <lastmod>2023-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.atharva.io/posts/sperax/</loc>
+    <lastmod>2023-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.atharva.io/posts/zkare/</loc>
+    <lastmod>2023-10-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.atharva.io/authors/atharva-amritkar/</loc>
     <lastmod>2023-10-08T00:00:00+00:00</lastmod>
   </url><url>
@@ -47,25 +56,29 @@
     <loc>https://www.atharva.io/categoria/sintaxe/</loc>
     <lastmod>2023-01-04T23:21:06+01:00</lastmod>
   </url><url>
+    <loc>https://www.atharva.io/posts/son/</loc>
+    <lastmod>2022-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.atharva.io/posts/sob/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.atharva.io/tags/gentoo/</loc>
-    <lastmod>2022-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.atharva.io/tags/gsoc/</loc>
-    <lastmod>2022-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.atharva.io/tags/linux/</loc>
-    <lastmod>2022-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.atharva.io/posts/gsoc/</loc>
-    <lastmod>2022-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.atharva.io/authors/wiredhikari/</loc>
-    <lastmod>2022-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.atharva.io/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.atharva.io/posts/sperax/</loc>
   </url><url>
     <loc>https://www.atharva.io/contact/</loc>
   </url><url>

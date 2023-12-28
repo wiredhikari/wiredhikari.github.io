@@ -8,6 +8,33 @@
     <language>en</language>
     <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://www.atharva.io/posts/mitacs/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/mitacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.atharva.io/posts/sperax/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/sperax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.atharva.io/posts/zkare/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/zkare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Introducing Ocean Protocol</title>
       <link>https://www.atharva.io/posts/ocean/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
@@ -35,9 +62,27 @@
     </item>
     
     <item>
-      <title>RISC-V support for Gentoo Prefix</title>
+      <title>Summer of Nix</title>
+      <link>https://www.atharva.io/posts/son/</link>
+      <pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/son/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contributing to Fedimint (A Federated E-Cash Mint on Bitcoin)</title>
+      <link>https://www.atharva.io/posts/sob/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/posts/sob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RISC-V support for Gentoo Prefix @GSoC</title>
       <link>https://www.atharva.io/posts/gsoc/</link>
-      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.atharva.io/posts/gsoc/</guid>
       <description></description>
@@ -49,17 +94,8 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.atharva.io/about/</guid>
-      <description>Hello, I am Atharva Amritkar, a 4th yr undergraduate student in IIT Kharagpur. I am from Pune
+      <description>नमस्ते राही Link to heading I am Atharva Amritkar, a 4th yr undergraduate student in IIT Kharagpur. I am from Pune
 Professionally, I have done various open source programs like GSoC, Summer of Bitcoin during my sophomore year and while doing these programs I found my interests in decentralised finance, crypto economics and blockchain in general. So during my third yr I did several Defi and web3 based internships, and also was called by government of Canada for a research internship in the field of blockchain, where I worked on integrating zk proofs and blockchain with hospitals and worked on crypto economics there.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.atharva.io/posts/sperax/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/posts/sperax/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -68,7 +104,7 @@ Professionally, I have done various open source programs like GSoC, Summer of Bi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.atharva.io/contact/</guid>
-      <description>Follow me, @wired_hikari.</description>
+      <description> For business queries contact me at: atharva@hashed.com For anything else : atharvaamritkar@protonmail.com , hi@atharva.io Want to set up a meeting? Here you go My socials: Github Twitter Linkedin </description>
     </item>
     
     <item>
