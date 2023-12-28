@@ -1,7 +1,7 @@
 +++
 authors = ["wiredhikari"]
-title = "RISC-V support for Gentoo Prefix"
-date = "2022-08-07"
+title = "RISC-V support for Gentoo Prefix @GSoC"
+date = "2022-09-07"
 description = "GSoC Final Report"
 tags = [
    "gsoc",
@@ -20,6 +20,12 @@ categories = [
 <img src="./../assets/images/gentoo.svg" width="200"/> <img src="./../assets/images/arrow.svg" width="200"/> <img src="./../assets/images/gsoc.svg" width="200"/> 
 </div>
 
+{{< centeredImages 
+    image1="https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/assets/images/gentoo.svg" 
+    image2="https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/assets/images/arrow.svg" 
+    image3="https://raw.githubusercontent.com/wiredhikari/prefix_on_riscv/main/assets/images/gsoc.svg" 
+    width="230" 
+>}}
 
 **Student:** [Atharva Amritkar](https://github.com/wiredhikari)
 
@@ -30,6 +36,7 @@ categories = [
 **Project repository:** [Gentoo](https://github.com/gentoo/gentoo), [Prefix](https://github.com/gentoo/prefix), [EESSI](https://github.com/EESSI)
 
 **Project proposal:** [Proposal](https://docs.google.com/document/d/1vKRaRKEWt-485oVdCfxLecXKbMwgajlv-6ZOGflwW6g/edit#heading=h.7uif4cjti9op)
+
 
 ## Table of Contents
 
@@ -50,6 +57,8 @@ categories = [
 - [Conclusion](#conclusion)
 - [Acknowledgement](#acknowledgement)
 ## Project Overview
+
+
 
 [RISC-V](https://riscv.org/) is an emerging open CPU architecture that is starting to be adopted well beyond the embedded domain; the European Processor Initiative (EPI) project is a clear example of this.
 

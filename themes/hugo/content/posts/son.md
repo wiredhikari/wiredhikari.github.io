@@ -1,7 +1,7 @@
 +++
 authors = [" Atharva Amritkar"]
-title = ""
-date = "2023-10-08"
+title = "Summer of Nix"
+date = "2022-10-08"
 description = ""
 tags = [
     "",

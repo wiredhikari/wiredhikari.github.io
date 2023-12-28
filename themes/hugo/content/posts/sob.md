@@ -1,7 +1,7 @@
 +++
 authors = [" Atharva Amritkar"]
-title = ""
-date = "2023-10-08"
+title = "Contributing to Fedimint (A Federated E-Cash Mint on Bitcoin)"
+date = "2022-09-08"
 description = ""
 tags = [
     "",
