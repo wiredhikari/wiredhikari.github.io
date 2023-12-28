@@ -58,12 +58,12 @@ style = "github-dark"
   name = "Telegram"
   icon = "fa fa-telegram fa-2x"
   weight = 4
-  url = "https://twitter.com/wired_hikari/"
+  url = "https://t.me/wiredhikari"
 [[params.social]]
   name = "Gmail"
   icon = "fa fa-envelope fa-2x"
   weight = 5
-  url = "https://twitter.com/wired_hikari/"
+  url = "mailto:atharva@hashed.com"
 
 # Menu links
 [[menu.main]]
