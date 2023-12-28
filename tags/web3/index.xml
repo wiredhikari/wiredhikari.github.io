@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> Atharva Amritkar on wiredhikari</title>
-    <link>https://www.atharva.io/authors/atharva-amritkar/</link>
-    <description>Recent content in  Atharva Amritkar on wiredhikari</description>
+    <title>web3 on wiredhikari</title>
+    <link>https://www.atharva.io/tags/web3/</link>
+    <description>Recent content in web3 on wiredhikari</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/authors/atharva-amritkar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/tags/web3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introducing Ocean Protocol</title>
       <link>https://www.atharva.io/posts/ocean/</link>

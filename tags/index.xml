@@ -8,29 +8,11 @@
     <language>en</language>
     <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>gentoo</title>
-      <link>https://www.atharva.io/tags/gentoo/</link>
+      <title>investment thesis</title>
+      <link>https://www.atharva.io/tags/investment-thesis/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.atharva.io/tags/gentoo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gsoc</title>
-      <link>https://www.atharva.io/tags/gsoc/</link>
-      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/tags/gsoc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://www.atharva.io/tags/linux/</link>
-      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/tags/linux/</guid>
+      <guid>https://www.atharva.io/tags/investment-thesis/</guid>
       <description></description>
     </item>
     
@@ -40,6 +22,42 @@
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.atharva.io/tags/riscv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web3</title>
+      <link>https://www.atharva.io/tags/web3/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/tags/web3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gentoo</title>
+      <link>https://www.atharva.io/tags/gentoo/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/tags/gentoo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gsoc</title>
+      <link>https://www.atharva.io/tags/gsoc/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/tags/gsoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://www.atharva.io/tags/linux/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.atharva.io/tags/linux/</guid>
       <description></description>
     </item>
     
