@@ -2,83 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wiredhikari</title>
-    <link>https://www.atharva.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on wiredhikari</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atharva.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Introducing Ocean Protocol</title>
-      <link>https://www.atharva.io/posts/ocean/</link>
-      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/posts/ocean/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>temas</title>
-      <link>https://www.atharva.io/categoria/temas/</link>
-      <pubDate>Wed, 04 Jan 2023 23:21:18 +0100</pubDate>
-      
-      <guid>https://www.atharva.io/categoria/temas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sintaxe</title>
-      <link>https://www.atharva.io/categoria/sintaxe/</link>
-      <pubDate>Wed, 04 Jan 2023 23:21:06 +0100</pubDate>
-      
-      <guid>https://www.atharva.io/categoria/sintaxe/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RISC-V support for Gentoo Prefix</title>
-      <link>https://www.atharva.io/posts/gsoc/</link>
-      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/posts/gsoc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://www.atharva.io/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/about/</guid>
-      <description>Hello, I am Atharva Amritkar, a 4th yr undergraduate student in IIT Kharagpur. I am from Pune
-Professionally, I have done various open source programs like GSoC, Summer of Bitcoin during my sophomore year and while doing these programs I found my interests in decentralised finance, crypto economics and blockchain in general. So during my third yr I did several Defi and web3 based internships, and also was called by government of Canada for a research internship in the field of blockchain, where I worked on integrating zk proofs and blockchain with hospitals and worked on crypto economics there.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.atharva.io/posts/sperax/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/posts/sperax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://www.atharva.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/contact/</guid>
-      <description>Follow me, @wired_hikari.</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://www.atharva.io/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atharva.io/projects/</guid>
-      <description>Nothing to see here&amp;hellip; Move along!!!</description>
-    </item>
-    
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

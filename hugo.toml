@@ -1,10 +1,10 @@
-baseurl = "https://www.atharva.io"
-title = "wiredhikari"
-theme = "hugo"
-languagecode = "en"
-defaultcontentlanguage = "en"
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'wiredhikari'
+theme = 'hugo-coder'
 
-paginate = 20
+[pagination]
+pagerSize = 20
 
 [markup.highlight]
 style = "github-dark"
@@ -44,26 +44,31 @@ style = "github-dark"
   icon = "fa fa-github fa-2x"
   weight = 1
   url = "https://github.com/wiredhikari/"
+  target = "_blank"
 [[params.social]]
   name = "Linkedin"
   icon = "fa fa-linkedin fa-2x"
   weight = 2
   url = "https://linkedin.com/in/wiredhikari/"
+  target = "_blank"
 [[params.social]]
   name = "Twitter"
   icon = "fa fa-twitter fa-2x"
   weight = 3
   url = "https://twitter.com/wired_hikari/"
+  target = "_blank"
 [[params.social]]
   name = "Telegram"
   icon = "fa fa-telegram fa-2x"
   weight = 4
   url = "https://t.me/wiredhikari"
+  target = "_blank"
 [[params.social]]
   name = "Gmail"
   icon = "fa fa-envelope fa-2x"
   weight = 5
   url = "mailto:atharva@hashed.com"
+  target = "_blank"
 
 # Menu links
 [[menu.main]]

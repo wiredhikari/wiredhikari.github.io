@@ -2,28 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on wiredhikari</title>
-    <link>https://www.atharva.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on wiredhikari</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 04 Jan 2023 23:21:18 +0100</lastBuildDate><atom:link href="https://www.atharva.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>temas</title>
-      <link>https://www.atharva.io/categoria/temas/</link>
-      <pubDate>Wed, 04 Jan 2023 23:21:18 +0100</pubDate>
-      
-      <guid>https://www.atharva.io/categoria/temas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sintaxe</title>
-      <link>https://www.atharva.io/categoria/sintaxe/</link>
-      <pubDate>Wed, 04 Jan 2023 23:21:06 +0100</pubDate>
-      
-      <guid>https://www.atharva.io/categoria/sintaxe/</guid>
-      <description></description>
-    </item>
-    
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
